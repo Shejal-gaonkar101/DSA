@@ -22,6 +22,7 @@ class reverseArray {
       console.log(arr); 
     }
 
+      console.log(arr); 
 
 
 
