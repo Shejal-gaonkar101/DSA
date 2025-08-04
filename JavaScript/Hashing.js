@@ -7,13 +7,17 @@ class Hashing{
     #func() {
         let arr = [4, 5, 6, 3, 4, 3, 1, 4]
         let ch = 4
-        let hasharr = []
+        const hasharr = new Array(10).fill(0)
+       
         function hash(ch, arr) {
+            
             for (let i = 0; i < arr.length; i++) {
-                let num = arr[i]
-                hasharr[num] += 1
+                if(arr[i]==ch){
+                hasharr[ch] += 1
+                }
             }
         }
+        hash(ch,arr)
         console.log(hasharr);
     }
 }
