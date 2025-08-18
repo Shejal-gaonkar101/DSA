@@ -16,20 +16,20 @@
 //     proceedtoPaymnet(orderId)
 // })  
 
-promise.catch(function(err){
-    console.log("error",err);
+// Promise.catch(function(err){
+//     console.log("error",err);
     
-})
+// })
 
 //fetch()
 
-const api = "https://github.com/Shejal-gaonkar101";
+const api = "https://dummy.restapiexample.com/api/v1/employees";
 let data = fetch(api)
 
 console.log(data );
 
 //Creating an pormise 
-function createOrder    (cart){
+function createOrder(cart){
 const pr = new Promise(function(resolve ,reject){
     if(!data){
         const err = new console.error("data not foung");
@@ -42,4 +42,16 @@ const pr = new Promise(function(resolve ,reject){
 
 })
 }
+
+//Promise chaining
+//we have a cart 
+const cart =["shoes","pants","kurtas"]
+createOrder(cart)?.then(function(orderId){
+    console.log(orderId)
+})
+.then(function(){
+    proceedToPayment(orderId)
+}).catch(function(err){
+    console.log("error")
+})
 

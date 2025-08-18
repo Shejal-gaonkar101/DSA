@@ -55,7 +55,6 @@ function removeDuplicates(arr){
             if(arr[i]!=arr[j]){
                 j++
             }
-            if(arr[i]==arr)
         }
     }
 }
